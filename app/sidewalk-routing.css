@@ -174,3 +174,91 @@
 .high-contrast .blocked-sidewalk {
   outline: 1px solid #0d2b45;
 }
+
+.navigation-map {
+  background: #dfe8e7;
+}
+.navigation-map .road {
+  z-index: 2;
+  overflow: visible;
+  background: #fffdf7;
+  box-shadow: inset 0 0 0 1px #c9d2cf,0 1px 2px #0d2b4510;
+}
+.navigation-map .road::after {
+  content: '';
+  position: absolute;
+  opacity: .38;
+}
+.navigation-map .road-h::after {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  border-top: 1px dashed #9aa9a5;
+}
+.navigation-map .road-v::after {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  border-left: 1px dashed #9aa9a5;
+}
+.navigation-map .road small {
+  position: absolute;
+  z-index: 1;
+  color: #6e7d7a;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+.navigation-map .road-h small { left: 3%; top: 9%; }
+.navigation-map .road-v small { left: 58%; top: 7%; writing-mode: vertical-rl; }
+.navigation-map .r2 { top: 15%; }
+.navigation-map .r3 { top: 62%; }
+.navigation-map .c1 { left: 28%; }
+.navigation-map .c2 { left: 56%; }
+.urban-block {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #cbd6d2;
+  border-radius: 8px;
+  background: #cfdbd7;
+  box-shadow: inset 0 0 0 4px #dbe4e1;
+}
+.block-one { left: 3%; top: 4%; width: 18%; height: 20%; }
+.block-two { left: 39%; top: 56%; width: 17%; height: 14%; }
+.block-three { left: 82%; top: 36%; width: 14%; height: 15%; }
+.navigation-route {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+}
+.navigation-route-segment {
+  position: absolute;
+  display: block;
+  height: 11px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: #f28c28;
+  box-shadow: 0 0 0 3px #fff,0 2px 6px #0d2b4550;
+}
+.navigation-route-segment[style*="height"] {
+  width: 11px;
+  height: auto;
+  transform: translateX(-50%);
+}
+.navigation-map .accessible-crossing {
+  z-index: 10;
+  padding: 3px 4px;
+  opacity: .92;
+}
+.navigation-map .blocked-sidewalk {
+  z-index: 11;
+  padding: 4px 6px;
+  background: #fff;
+}
+.navigation-map .map-place { opacity: .22; visibility: visible; }
+.navigation-map .map-place:not(.selected) b { background: #60736f; }
+.navigation-map .map-place.selected { opacity: .42; }
+.navigation-map .route-pin { z-index: 13; width: 30px; height: 30px; font-size: 13px; }
+.high-contrast .navigation-route-segment { outline: 2px solid #0d2b45; box-shadow: 0 0 0 3px #fff; }
+.high-contrast .navigation-map .road { box-shadow: inset 0 0 0 2px #0d2b45; }
