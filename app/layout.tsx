@@ -2,6 +2,17 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import './prototype.css';
+import './iteration2.css';
+import './welcome.css';
+import './header.css';
+import './map-iteration.css';
+import './route-fix.css';
+import './places.css';
+import './logo-adjustment.css';
+import './manual-routes.css';
+import './tutorial-video.css';
+import './device-frame.css';
+import './sidewalk-routing.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

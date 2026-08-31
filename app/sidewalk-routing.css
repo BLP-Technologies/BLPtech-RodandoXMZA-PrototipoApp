@@ -1,0 +1,176 @@
+.sidewalk-network,
+.crossing-network,
+.sidewalk-route {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sidewalk-network { z-index: 3; }
+.crossing-network { z-index: 4; }
+.sidewalk-route { z-index: 5; }
+
+.sidewalk-street-corridor {
+  position: absolute;
+  z-index: 2;
+  left: 13%;
+  top: 64%;
+  width: 67%;
+  height: 8%;
+  border-block: 1px solid #9eaaa5;
+  background: #f8f6ef;
+}
+.sidewalk-street-corridor span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: #7b8582;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.sidewalk-segment,
+.crossing-segment,
+.chosen-segment {
+  position: absolute;
+  display: block;
+  height: 4px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: #9faaa6;
+  opacity: .62;
+}
+
+.sidewalk-segment[style*="height"],
+.crossing-segment[style*="height"],
+.chosen-segment[style*="height"] {
+  width: 4px;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.sidewalk-segment.accessible { background: #83988b; }
+.sidewalk-segment.unverified {
+  background: repeating-linear-gradient(90deg,#b27a00 0 6px,transparent 6px 10px);
+}
+.sidewalk-segment.blocked {
+  background: repeating-linear-gradient(90deg,#b43a3a 0 5px,transparent 5px 9px);
+}
+.sidewalk-segment.unverified[style*="height"] {
+  background: repeating-linear-gradient(180deg,#b27a00 0 6px,transparent 6px 10px);
+}
+.sidewalk-segment.blocked[style*="height"] {
+  background: repeating-linear-gradient(180deg,#b43a3a 0 5px,transparent 5px 9px);
+}
+
+.crossing-segment {
+  background: repeating-linear-gradient(90deg,#287b78 0 3px,#fff 3px 6px);
+}
+.crossing-segment[style*="height"] {
+  background: repeating-linear-gradient(180deg,#287b78 0 3px,#fff 3px 6px);
+}
+.crossing-segment.blocked {
+  background: repeating-linear-gradient(90deg,#b43a3a 0 3px,transparent 3px 6px);
+}
+.crossing-segment.blocked[style*="height"] {
+  background: repeating-linear-gradient(180deg,#b43a3a 0 3px,transparent 3px 6px);
+}
+
+.chosen-segment {
+  height: 13px;
+  background: #f28c28;
+  opacity: 1;
+  box-shadow: 0 0 0 2px #fff,0 2px 5px #0d2b4555;
+}
+.chosen-segment[style*="height"] { width: 13px; }
+.chosen-segment.crossing {
+  background: #f28c28;
+}
+.chosen-segment.crossing[style*="height"] {
+  background: #f28c28;
+}
+.chosen-segment.unverified {
+  background: #f28c28;
+}
+.chosen-segment.unverified[style*="height"] {
+  background: #f28c28;
+}
+
+.sidewalk-segment.focus-blocked {
+  height: 5px;
+  opacity: 1;
+}
+.sidewalk-segment.focus-blocked[style*="height"] { width: 5px; }
+.crossing-segment.focus-crossing { opacity: .18; }
+
+.accessible-crossing,
+.blocked-sidewalk {
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%,-50%);
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  padding: 3px 5px;
+  border-radius: 9px;
+  background: #fffdf8;
+  color: #0d2b45;
+  font-size: 8px;
+  line-height: 1.15;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 1px 4px #0d2b4530;
+}
+.accessible-crossing b,
+.blocked-sidewalk b {
+  font-size: 15px;
+  line-height: .85;
+}
+.accessible-crossing small,
+.blocked-sidewalk small {
+  font-size: 7px;
+  line-height: 1;
+  font-weight: 900;
+}
+.accessible-crossing {
+  color: #126866;
+  transform: translate(8px,-50%);
+  border: 1px solid #287b78;
+}
+.blocked-sidewalk {
+  color: #8e2525;
+  border: 1px solid #b43a3a;
+}
+
+.sidewalk-map .route-pin { z-index: 12; }
+.sidewalk-map .map-place { z-index: 7; opacity: 0; visibility: hidden; }
+.sidewalk-map .map-place.selected { opacity: 1; visibility: visible; filter: none; z-index: 11; }
+.sidewalk-map .map-place:not(.selected) b { width: 20px; height: 20px; font-size: 10px; }
+.sidewalk-map .map-place:not(.selected) small { display: none; }
+.sidewalk-map .road { z-index: 1; }
+.sidewalk-map .green-zone { z-index: 0; }
+
+.sidewalk-map + .map-legend,
+.map-page .map-legend {
+  gap: 4px;
+  padding: 7px;
+}
+.map-page .map-legend .badge {
+  padding: 4px 7px;
+  font-size: 10px;
+}
+.map-page .map-legend .badge b {
+  width: 16px;
+  height: 16px;
+}
+
+.high-contrast .sidewalk-segment,
+.high-contrast .chosen-segment,
+.high-contrast .sidewalk-route-label,
+.high-contrast .accessible-crossing,
+.high-contrast .blocked-sidewalk {
+  outline: 1px solid #0d2b45;
+}
