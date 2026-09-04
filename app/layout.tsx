@@ -13,6 +13,8 @@ import './manual-routes.css';
 import './tutorial-video.css';
 import './device-frame.css';
 import './sidewalk-routing.css';
+import './text-to-speech.css';
+import './account-access.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

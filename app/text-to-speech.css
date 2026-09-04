@@ -1,0 +1,109 @@
+.accessibility-preferences {
+  padding: 16px 4px;
+  border-bottom: 1px solid #cdd9d5;
+}
+
+.accessibility-preferences h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.settings-list .voice-toggle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  text-transform: none;
+}
+
+.voice-toggle > span {
+  display: grid;
+  gap: 5px;
+  flex: 1;
+}
+
+.voice-toggle small {
+  margin: 0;
+  color: #536a79;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.voice-toggle em {
+  color: #297b78;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.voice-toggle input[role='switch'] {
+  appearance: none;
+  width: 52px;
+  height: 30px;
+  flex: 0 0 52px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #849691;
+  border-radius: 99px;
+  background: #d9e1de;
+  cursor: pointer;
+  position: relative;
+}
+
+.voice-toggle input[role='switch']::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+  left: 3px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 4px #0d2b4540;
+  transition: transform .18s ease;
+}
+
+.voice-toggle input[role='switch']:checked {
+  border-color: #167b78;
+  background: var(--teal);
+}
+
+.voice-toggle input[role='switch']:checked::before {
+  transform: translateX(21px);
+}
+
+.speech-button {
+  width: 100%;
+  min-height: 54px;
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  border: 2px solid #167b78;
+  border-radius: 15px;
+  background: #e1f3f1;
+  color: var(--navy);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.speech-button.speaking {
+  border-color: #923838;
+  background: #fff0ed;
+  color: #7b2929;
+}
+
+.speech-message {
+  margin: -10px 0 24px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--orange);
+  border-radius: 10px;
+  background: #fff3df;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.high-contrast .accessibility-preferences,
+.high-contrast .speech-button,
+.high-contrast .speech-message {
+  border-color: var(--navy);
+}

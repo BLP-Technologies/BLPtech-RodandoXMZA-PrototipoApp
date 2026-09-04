@@ -21,3 +21,83 @@
   height: 100%;
   border: 0;
 }
+
+.tutorial-search {
+  margin-bottom: 22px;
+}
+
+.tutorial-reference-note {
+  margin: -10px 0 20px;
+  padding: 10px 12px;
+  border-left: 3px solid #9ebbb4;
+  border-radius: 8px;
+  background: #f3f7f5;
+  color: #536a79;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.tutorial-meta {
+  margin: 0 0 14px;
+  color: #297b78;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tutorial-description {
+  margin-top: 18px;
+}
+
+.tutorial-search > label {
+  margin-bottom: 8px;
+}
+
+.tutorial-search > div {
+  position: relative;
+}
+
+.tutorial-search input[type='search'] {
+  margin-top: 0;
+  padding-right: 50px;
+}
+
+.tutorial-search input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+
+.tutorial-search button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 50%;
+  background: #eef4f2;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tutorial-empty {
+  padding: 28px 18px;
+  border: 1px solid #dbe4e1;
+  border-radius: 18px;
+  background: #f7faf8;
+  text-align: center;
+}
+
+.tutorial-empty p {
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.tutorial-empty button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid var(--navy);
+  border-radius: 12px;
+  background: white;
+  font-weight: 800;
+  cursor: pointer;
+}
