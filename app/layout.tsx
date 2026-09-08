@@ -15,6 +15,7 @@ import './device-frame.css';
 import './sidewalk-routing.css';
 import './text-to-speech.css';
 import './account-access.css';
+import './figma-alignment.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
