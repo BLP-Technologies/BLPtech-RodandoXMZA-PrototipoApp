@@ -8,6 +8,8 @@ export function useTextToSpeech(){
 
   useEffect(()=>{
     const supported=typeof window!=='undefined'&&'speechSynthesis'in window&&'SpeechSynthesisUtterance'in window;
+    // Browser capability is read after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsSupported(supported);
     return()=>{if(supported)window.speechSynthesis.cancel()};
   },[]);

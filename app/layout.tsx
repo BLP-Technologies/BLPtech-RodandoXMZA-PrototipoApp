@@ -16,6 +16,7 @@ import './sidewalk-routing.css';
 import './text-to-speech.css';
 import './account-access.css';
 import './figma-alignment.css';
+import './ux-refresh.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -42,7 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="device-frame">{children}</div>
       </body>
     </html>
   );
