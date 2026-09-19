@@ -53,12 +53,109 @@ export const routes=['Casa → Escuela','Iglesia → Plaza','Trabajo → Hospita
 export const barrierTypes=['Vereda rota','Falta de rampa','Rampa bloqueada','Obstáculo en la vereda','Cruce inaccesible','Entrada no accesible','Otro'];
 export const reports=[{id:1,location:'Av. España y Espejo',type:'Vereda rota'}];
 export const tutorials=[
- {id:1,title:'Moverse por la ciudad',icon:'⌖',duration:'3 min',category:'Movilidad urbana',keywords:['recorridos','cruces','calles','cordón'],description:'Cómo resolver cordones y desniveles con asistencia y priorizando la seguridad.',youtubeId:'dd242o2ozK0'},
- {id:2,title:'Subir y bajar escalones',icon:'↗',duration:'4 min',category:'Técnicas de movilidad',keywords:['escalón','escalera','asistencia','cuidador'],description:'Una demostración guiada para practicar el ascenso de escalones con asistencia.',youtubeId:'kxwPS4rtbDo'},
- {id:3,title:'Rampas y desniveles',icon:'⌁',duration:'3 min',category:'Técnicas de movilidad',keywords:['rampa','pendiente','desnivel','impulso'],description:'Técnicas de impulso, posición de manos y control para subir una rampa.',youtubeId:'8iDMgx3CoJs'},
- {id:4,title:'Mantenimiento de la silla',icon:'◉',duration:'5 min',category:'Mantenimiento',keywords:['silla de ruedas','controles','frenos','cuidado'],description:'Revisión y ajuste de los frenos para conservar la silla segura y funcional.',youtubeId:'hsaVAg3o9TU'},
- {id:5,title:'Cambiar una rueda',icon:'◎',duration:'3 min',category:'Mantenimiento',keywords:['rueda','cubierta','reparación','silla'],description:'Demostración práctica para retirar y cambiar una cubierta sólida de silla de ruedas.',youtubeId:'S_XuEE9koc8'},
- {id:6,title:'Seguridad y autonomía',icon:'✓',duration:'3 min',category:'Seguridad',keywords:['autonomía','confianza','prevención','cordón'],description:'Recomendaciones para afrontar obstáculos urbanos con ayuda y comunicación segura.',youtubeId:'dd242o2ozK0'},
- {id:7,title:'Cómo usar una escalera mecánica',icon:'↗',duration:'1 min',category:'Movilidad urbana',keywords:['escalera mecánica','escalera','shopping','movilidad','ascensor'],description:'Demostración de una habilidad avanzada. Priorizá el ascensor y practicá únicamente con acompañamiento especializado.',youtubeId:'nIpgCIq4Gw8'}
+ {
+  "id": 1,
+  "title": "Moverse por la ciudad",
+  "icon": "⌖",
+  "duration": "8 min",
+  "category": "Movilidad urbana",
+  "keywords": [
+   "recorridos",
+   "calles",
+   "propulsión",
+   "equilibrio"
+  ],
+  "description": "Técnicas de propulsión y equilibrio en silla de ruedas, explicadas en español por Fisioterapia para la gente. Practicá con acompañamiento profesional.",
+  "youtubeId": "MyB_T1etaQE"
+ },
+ {
+  "id": 2,
+  "title": "Subir y bajar cordones",
+  "icon": "↗",
+  "duration": "4 min",
+  "category": "Técnicas de movilidad",
+  "keywords": [
+   "escalón",
+   "cordón",
+   "banqueta",
+   "asistencia"
+  ],
+  "description": "Demostración en español para afrontar el desnivel entre la calle y la vereda. Adaptá la técnica a tus capacidades con acompañamiento profesional.",
+  "youtubeId": "OeMxqC9lbvk"
+ },
+ {
+  "id": 3,
+  "title": "Subir rampas",
+  "icon": "⌁",
+  "duration": "7 min",
+  "category": "Técnicas de movilidad",
+  "keywords": [
+   "rampa",
+   "pendiente",
+   "desnivel",
+   "impulso"
+  ],
+  "description": "Fisioterapia para la gente explica en español el manejo de la silla en una rampa y el trabajo de propulsión.",
+  "youtubeId": "MuSoLag_meo"
+ },
+ {
+  "id": 4,
+  "title": "Mantenimiento de la silla",
+  "icon": "◉",
+  "duration": "17 min",
+  "category": "Mantenimiento",
+  "keywords": [
+   "silla de ruedas",
+   "limpieza",
+   "cuidado"
+  ],
+  "description": "Edna Serrano comparte en español una demostración de limpieza y cuidado de su silla de ruedas.",
+  "youtubeId": "MgHRuP68pk4"
+ },
+ {
+  "id": 5,
+  "title": "Armado y ajustes de la silla",
+  "icon": "◎",
+  "duration": "31 min",
+  "category": "Mantenimiento",
+  "keywords": [
+   "ruedas",
+   "armado",
+   "ajustes",
+   "silla"
+  ],
+  "description": "Tutorial en español de Fisioterapia para la gente sobre el armado de una silla de ruedas y consejos para conocer sus componentes.",
+  "youtubeId": "BwiOkpcY4iM"
+ },
+ {
+  "id": 6,
+  "title": "Uso seguro de la silla de ruedas",
+  "icon": "✓",
+  "duration": "4 min",
+  "category": "Seguridad",
+  "keywords": [
+   "autonomía",
+   "seguridad",
+   "frenos",
+   "asistencia"
+  ],
+  "description": "Recomendaciones en español para preparar y utilizar una silla de ruedas con asistencia, prestando atención a la seguridad.",
+  "youtubeId": "G0sS5VdalQI"
+ },
+ {
+  "id": 7,
+  "title": "Conocer los tipos de sillas de ruedas",
+  "icon": "↗",
+  "duration": "12 min",
+  "category": "Autonomía",
+  "keywords": [
+   "silla manual",
+   "silla eléctrica",
+   "tipos",
+   "elección"
+  ],
+  "description": "Fisioterapia para la gente presenta en español diferencias entre sillas de ruedas para conocer sus características y usos.",
+  "youtubeId": "jk4F9j5CF7Y"
+ }
 ];
 export const api={getRoute:async(from:string,to:string)=>getRoutePlan(from,to),getSavedRoutes:async()=>savedRoutes,saveRoute:async(route:SavedRoute)=>route,deleteSavedRoute:async(id:number)=>id,updateUser:async(name:string)=>({name}),createReport:async(report:unknown)=>({ok:true,report}),getTutorials:async()=>tutorials};

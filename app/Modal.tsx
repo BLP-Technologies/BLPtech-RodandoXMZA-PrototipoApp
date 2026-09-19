@@ -2,7 +2,7 @@
 import {useEffect,useRef,type ReactNode} from 'react';
 
 /** Keeps keyboard focus and the overlay inside the simulated device. */
-export default function Modal({title,children,onClose}:{title:string;children:ReactNode;onClose:()=>void}) {
+export default function Modal({title,children,onClose,className=''}:{title:string;children:ReactNode;onClose:()=>void;className?:string}) {
   const ref=useRef<HTMLDivElement>(null);
   const close=useRef(onClose);
   useEffect(()=>{close.current=onClose;},[onClose]);
@@ -24,5 +24,5 @@ export default function Modal({title,children,onClose}:{title:string;children:Re
     overlay.addEventListener('keydown',handle);
     return()=>{siblings.forEach(el=>el.inert=false);overlay.removeEventListener('keydown',handle);if(previous?.isConnected)previous.focus();};
   },[]);
-  return <div ref={ref} className="modal-backdrop"><section className="app-dialog" role="dialog" aria-modal="true" aria-label={title}><h2>{title}</h2>{children}</section></div>;
+  return <div ref={ref} className="modal-backdrop"><section className={`app-dialog ${className}`} role="dialog" aria-modal="true" aria-label={title}><h2>{title}</h2>{children}</section></div>;
 }
